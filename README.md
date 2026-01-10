@@ -1,5 +1,40 @@
-# task_tracker_cli
-A CLI to track tasks made using Python  
-Tasks are loaded from and saved to JSON file named: data.json  
-Current list of operations: Add, Delete and Show all tasks  
-<img width="1723" height="684" alt="Image" src="https://github.com/user-attachments/assets/a45e29fc-485c-43a6-ac6a-506f285182b0" />
+<h1>Task Tracker CLI</h1>
+<p>A lightweight Command Line Interface (CLI) application built with Python to efficiently manage and track daily tasks. Tasks are persisted locally using a JSON file.</p><br><br>
+<h3>Features</h3>
+<ul>
+  <li>Add tasks</li>
+  <li>Delete tasks</li>
+  <li>Update existing tasks</li>
+  <li>View all tasks</li>
+  <li>View completed tasks</li>
+  <li>View pending tasks</li>
+  <li>Mark tasks as completed</li>
+</ul>
+<br><br>
+<h3>How It Works</h3>
+<ul>
+  <li>All tasks are stored locally in a JSON file named data.json</li>
+  <li>The file is created if it doesn't exist.</li>
+  <li>Each task maintains essential metadata to ensure traceability and updates.</li>
+</ul>
+<br><br>
+<h3>Task Schema</h3>
+<p>Each task in data.json contains:</p>
+<br>
+<code>
+  {
+  "id": 1,
+  "task_name": "Finish README",
+  "status": "done / not done",
+  "created_at": "dd-mm-yyyy hh-mm",
+  "updated_at": "dd-mm-yyyy hh-mm"
+}
+</code>
+<br><br>
+<h2>Why This Porject?</h2>
+<p>This project demonstrates:</p>
+<ul>
+  <li>Practical use of file handling in Python</li>
+  <li>Working with JSON for persistent storage</li>
+  <li>Implementing CRUD operations</li>
+</ul>
