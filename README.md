@@ -1,5 +1,5 @@
 <h1>Task Tracker CLI</h1>
-<p>A lightweight Command Line Interface (CLI) application built with Python to efficiently manage and track daily tasks. Tasks are persisted locally using a JSON file.</p><br><br>
+<p>A lightweight Command Line Interface (CLI) application built with Python to efficiently manage and track daily tasks. Tasks are persisted locally using a JSON file.</p>
 <h3>Features</h3>
 <ul>
   <li>Add tasks</li>
@@ -10,17 +10,14 @@
   <li>View pending tasks</li>
   <li>Mark tasks as completed</li>
 </ul>
-<br><br>
 <h3>How It Works</h3>
 <ul>
   <li>All tasks are stored locally in a JSON file named data.json</li>
   <li>The file is created if it doesn't exist.</li>
   <li>Each task maintains essential metadata to ensure traceability and updates.</li>
 </ul>
-<br><br>
 <h3>Task Schema</h3>
 <p>Each task in data.json contains:</p>
-<br>
 <code>
   {
   "id": 1,
@@ -30,7 +27,6 @@
   "updated_at": "dd-mm-yyyy hh-mm"
 }
 </code>
-<br><br>
 <h2>Why This Porject?</h2>
 <p>This project demonstrates:</p>
 <ul>
