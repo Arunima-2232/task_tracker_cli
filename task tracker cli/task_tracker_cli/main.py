@@ -18,7 +18,7 @@ def save_data(data):
 
 def main():
     parser=argparse.ArgumentParser(description="A simple task tracking CLI application")
-    parser.add_argument("operation",choices=["add","delete","update","mark-done","show","show-done","show-not-done"],help="Operation to perform")
+    parser.add_argument("operation",choices=["add","delete","update","mark-done","show","show-done","show-not-done","mark-progress","show-progress"],help="Operation to perform")
     parser.add_argument("task",type=str,nargs="*",help="task to be added or deleted")
     args=parser.parse_args()
     data=load_data()
@@ -65,6 +65,18 @@ def main():
                 print("Task marked as done!")
             else:
                 print("Task doesn't exist")
+        elif args.operation=="mark-progress":
+            task_id=None
+            for key,value in data.items():
+                if key==task:
+                    task_id=task
+                    data[task_id][1]="In progress...!"
+                    data[task_id][3]=datetime.now().strftime('%d/%m/%Y, %H:%M')
+                    break
+            if task_id:
+                print("Task marked as in progress!")
+            else:
+                print("Task doesn't exist")
         elif args.operation=="show":
             if not data:
                 print("No tasks")
@@ -92,6 +104,18 @@ def main():
                 print("Tasks marked not done:")
                 for key,value in data.items():
                     if(value[1]=="Not done"):
+                        task_id=key
+                        print(key+".",value[0])
+                if(task_id==None):
+                    print("None")
+        elif args.operation=="show-progress":
+            if not data:
+                print("No tasks")
+            else:
+                task_id=None
+                print("Tasks marked in progress:")
+                for key,value in data.items():
+                    if(value[1]=="In progress..."):
                         task_id=key
                         print(key+".",value[0])
                 if(task_id==None):
