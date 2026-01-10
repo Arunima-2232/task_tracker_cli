@@ -1,5 +1,9 @@
 <h1>Task Tracker CLI</h1>
 <p>A lightweight Command Line Interface (CLI) application built with Python to efficiently manage and track daily tasks. Tasks are persisted locally using a JSON file.</p>
+<br>
+<img src=task tracker cli/images/Screenshot 2026-01-10 233109.png>
+<img src=task tracker cli/images/Screenshot 2026-01-10 232956.png>
+<br>
 <p>Taken from: https://roadmap.sh/projects/task-tracker</p>
 <h3>How to run:</h3>
 <p>On command prompt run pip install -e "PATH"</p>
